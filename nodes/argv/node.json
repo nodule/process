@@ -1,0 +1,19 @@
+{
+  "name": "argv",
+  "ns": "process",
+  "description": "Provides argv",
+  "phrases": {
+    "active": "Providing argv"
+  },
+  "expose": ["process"],
+  "ports": {
+    "input": {
+    },
+    "output": {
+      "out": {
+        "title": "Argv",
+        "type": "array"
+      }
+    }
+  }
+}

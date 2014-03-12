@@ -1,0 +1,19 @@
+{
+  "name": "stderr",
+  "ns": "process",
+  "description": "Provides stderr",
+  "phrases": {
+    "active": "Providing stderr"
+  },
+  "expose": ["process"],
+  "ports": {
+    "input": {
+    },
+    "output": {
+      "out": {
+        "title": "Stream",
+        "type": "Stream"
+      }
+    }
+  }
+}

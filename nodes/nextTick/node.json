@@ -1,0 +1,23 @@
+{
+  "name": "nextTick",
+  "ns": "process",
+  "description": "Takes the input and outputs it on nextTick",
+  "phrases": {
+    "active": "Ticking"
+  },
+  "expose": ["process"],
+  "ports": {
+    "input": {
+      "in": {
+        "title": "Input",
+        "type": "any"
+      }
+    },
+    "output": {
+      "out": {
+        "title": "Output",
+        "type": "any"
+      }
+    }
+  }
+}

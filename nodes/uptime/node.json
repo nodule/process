@@ -1,0 +1,19 @@
+{
+  "name": "uptime",
+  "ns": "process",
+  "description": "Number of seconds Node has been running",
+  "phrases": {
+    "active": "Determining uptime"
+  },
+  "expose": ["process"],
+  "ports": {
+    "input": {
+    },
+    "output": {
+      "out": {
+        "title": "Output",
+        "type": "any"
+      }
+    }
+  }
+}

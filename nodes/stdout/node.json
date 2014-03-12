@@ -1,0 +1,19 @@
+{
+  "name": "stdout",
+  "ns": "process",
+  "description": "Provides stdout",
+  "phrases": {
+    "active": "Providing stdout"
+  },
+  "expose": ["process"],
+  "ports": {
+    "input": {
+    },
+    "output": {
+      "out": {
+        "title": "Stream",
+        "type": "Stream"
+      }
+    }
+  }
+}
