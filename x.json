@@ -1,0 +1,149 @@
+{
+  "name": "process",
+  "description": "NodeJS process for Chiχ",
+  "version": "0.0.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodule/process.git"
+  },
+  "nodes": [
+    {
+      "ports": {
+        "input": {},
+        "output": {
+          "out": {
+            "title": "Argv",
+            "type": "array"
+          }
+        }
+      },
+      "expose": [
+        "process"
+      ],
+      "phrases": {
+        "active": "Providing argv"
+      },
+      "description": "Provides argv",
+      "ns": "process",
+      "name": "argv",
+      "fn": "output.out = process.argv;\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "in": {
+            "title": "Input",
+            "type": "any"
+          }
+        },
+        "output": {
+          "out": {
+            "title": "Output",
+            "type": "any"
+          }
+        }
+      },
+      "expose": [
+        "process"
+      ],
+      "phrases": {
+        "active": "Ticking"
+      },
+      "description": "Takes the input and outputs it on nextTick",
+      "ns": "process",
+      "name": "nextTick",
+      "fn": "on.input.in = function() {\n  process.nextTick(function() {\n    output({ out: this.data });\n  }.bind({ data: data }));\n};\n"
+    },
+    {
+      "ports": {
+        "input": {},
+        "output": {
+          "out": {
+            "title": "Stream",
+            "type": "Stream"
+          }
+        }
+      },
+      "expose": [
+        "process"
+      ],
+      "phrases": {
+        "active": "Providing stderr"
+      },
+      "description": "Provides stderr",
+      "ns": "process",
+      "name": "stderr",
+      "fn": "output.out = process.stderr;\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "encoding": {
+            "title": "Encoding",
+            "type": "string",
+            "default": "utf-8"
+          }
+        },
+        "output": {
+          "out": {
+            "title": "Stream",
+            "type": "Stream"
+          }
+        }
+      },
+      "expose": [
+        "process"
+      ],
+      "phrases": {
+        "active": "Providing stdin"
+      },
+      "description": "Provides stdin",
+      "ns": "process",
+      "name": "stdin",
+      "fn": "process.stdin.resume();\nprocess.stdin.setEncoding(input.encoding);\noutput.out = process.stdin;\n"
+    },
+    {
+      "ports": {
+        "input": {},
+        "output": {
+          "out": {
+            "title": "Stream",
+            "type": "Stream"
+          }
+        }
+      },
+      "expose": [
+        "process"
+      ],
+      "phrases": {
+        "active": "Providing stdout"
+      },
+      "description": "Provides stdout",
+      "ns": "process",
+      "name": "stdout",
+      "fn": "output.out = process.stdout;\n"
+    },
+    {
+      "ports": {
+        "input": {},
+        "output": {
+          "out": {
+            "title": "Output",
+            "type": "any"
+          }
+        }
+      },
+      "expose": [
+        "process"
+      ],
+      "phrases": {
+        "active": "Determining uptime"
+      },
+      "description": "Number of seconds Node has been running",
+      "ns": "process",
+      "name": "uptime",
+      "fn": "output.out = process.uptime();\n"
+    }
+  ],
+  "twigs": []
+}
