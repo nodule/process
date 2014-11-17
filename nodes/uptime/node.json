@@ -5,10 +5,11 @@
   "phrases": {
     "active": "Determining uptime"
   },
-  "expose": ["process"],
+  "expose": [
+    "process"
+  ],
   "ports": {
-    "input": {
-    },
+    "input": {},
     "output": {
       "out": {
         "title": "Output",

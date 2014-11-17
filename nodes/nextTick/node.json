@@ -5,7 +5,9 @@
   "phrases": {
     "active": "Ticking"
   },
-  "expose": ["process"],
+  "expose": [
+    "process"
+  ],
   "ports": {
     "input": {
       "in": {

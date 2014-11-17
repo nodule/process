@@ -5,10 +5,11 @@
   "phrases": {
     "active": "Providing stdout"
   },
-  "expose": ["process"],
+  "expose": [
+    "process"
+  ],
   "ports": {
-    "input": {
-    },
+    "input": {},
     "output": {
       "out": {
         "title": "Stream",

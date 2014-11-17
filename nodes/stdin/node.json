@@ -5,7 +5,9 @@
   "phrases": {
     "active": "Providing stdin"
   },
-  "expose": ["process"],
+  "expose": [
+    "process"
+  ],
   "ports": {
     "input": {
       "encoding": {

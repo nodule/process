@@ -5,10 +5,11 @@
   "phrases": {
     "active": "Providing argv"
   },
-  "expose": ["process"],
+  "expose": [
+    "process"
+  ],
   "ports": {
-    "input": {
-    },
+    "input": {},
     "output": {
       "out": {
         "title": "Argv",
