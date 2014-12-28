@@ -30,32 +30,6 @@
     },
     {
       "ports": {
-        "input": {
-          "in": {
-            "title": "Input",
-            "type": "any"
-          }
-        },
-        "output": {
-          "out": {
-            "title": "Output",
-            "type": "any"
-          }
-        }
-      },
-      "expose": [
-        "process"
-      ],
-      "phrases": {
-        "active": "Ticking"
-      },
-      "description": "Takes the input and outputs it on nextTick",
-      "ns": "process",
-      "name": "nextTick",
-      "fn": "on.input.in = function() {\n  process.nextTick(function() {\n    output({ out: this.data });\n  }.bind({ data: data }));\n};\n"
-    },
-    {
-      "ports": {
         "input": {},
         "output": {
           "out": {
