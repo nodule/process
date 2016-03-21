@@ -1,1 +1,1 @@
-output.out = process.stdout;
+output.out = $.create(process.stdout);

@@ -1,1 +1,1 @@
-output.out = process.argv;
+output.out = $.create(process.argv);

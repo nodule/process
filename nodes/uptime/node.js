@@ -1,1 +1,1 @@
-output.out = process.uptime();
+output.out = $.create(process.uptime());

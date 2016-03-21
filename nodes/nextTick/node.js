@@ -1,5 +1,5 @@
 on.input.in = function() {
   process.nextTick(function() {
-    output({ out: d });
+    output({ out: $.create(d) });
   }.bind({ d: $.in}));
 };
