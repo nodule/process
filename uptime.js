@@ -15,9 +15,9 @@ module.exports = {
       }
     }
   },
-  fn: function uptime(input, output, state, done, cb, on, process) {
+  fn: function uptime(input, $, output, state, done, cb, on, process) {
     var r = function() {
-      output.out = process.uptime();
+      output.out = $.create(process.uptime());
     }.call(this);
     return {
       output: output,

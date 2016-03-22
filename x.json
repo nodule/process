@@ -26,7 +26,33 @@
       "description": "Provides argv",
       "ns": "process",
       "name": "argv",
-      "fn": "output.out = process.argv;\n"
+      "fn": "output.out = $.create(process.argv);\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "in": {
+            "title": "Input",
+            "type": "any"
+          }
+        },
+        "output": {
+          "out": {
+            "title": "Output",
+            "type": "any"
+          }
+        }
+      },
+      "expose": [
+        "process"
+      ],
+      "phrases": {
+        "active": "Ticking"
+      },
+      "description": "Takes the input and outputs it on nextTick",
+      "ns": "process",
+      "name": "nextTick",
+      "fn": "on.input.in = function() {\n  process.nextTick(function() {\n    output({ out: $.create(d) });\n  }.bind({ d: $.in}));\n};\n"
     },
     {
       "ports": {
@@ -47,7 +73,7 @@
       "description": "Provides stderr",
       "ns": "process",
       "name": "stderr",
-      "fn": "output.out = process.stderr;\n"
+      "fn": "output.out = $.create(process.stderr);\n"
     },
     {
       "ports": {
@@ -74,7 +100,7 @@
       "description": "Provides stdin",
       "ns": "process",
       "name": "stdin",
-      "fn": "process.stdin.resume();\nprocess.stdin.setEncoding(input.encoding);\noutput.out = process.stdin;\n"
+      "fn": "process.stdin.resume();\nprocess.stdin.setEncoding($.encoding);\noutput.out = $.create(process.stdin);\n"
     },
     {
       "ports": {
@@ -95,7 +121,7 @@
       "description": "Provides stdout",
       "ns": "process",
       "name": "stdout",
-      "fn": "output.out = process.stdout;\n"
+      "fn": "output.out = $.create(process.stdout);\n"
     },
     {
       "ports": {
@@ -116,7 +142,7 @@
       "description": "Number of seconds Node has been running",
       "ns": "process",
       "name": "uptime",
-      "fn": "output.out = process.uptime();\n"
+      "fn": "output.out = $.create(process.uptime());\n"
     }
   ],
   "twigs": []

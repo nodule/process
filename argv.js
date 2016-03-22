@@ -15,9 +15,9 @@ module.exports = {
       }
     }
   },
-  fn: function argv(input, output, state, done, cb, on, process) {
+  fn: function argv(input, $, output, state, done, cb, on, process) {
     var r = function() {
-      output.out = process.argv;
+      output.out = $.create(process.argv);
     }.call(this);
     return {
       output: output,

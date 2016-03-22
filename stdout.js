@@ -15,9 +15,9 @@ module.exports = {
       }
     }
   },
-  fn: function stdout(input, output, state, done, cb, on, process) {
+  fn: function stdout(input, $, output, state, done, cb, on, process) {
     var r = function() {
-      output.out = process.stdout;
+      output.out = $.create(process.stdout);
     }.call(this);
     return {
       output: output,
