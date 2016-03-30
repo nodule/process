@@ -11,7 +11,7 @@ module.exports = {
       "in": {
         title: "Input",
         type: "any",
-        fn: function __IN__(data, x, source, state, input, output, process) {
+        fn: function __IN__(data, source, state, input, $, output) {
           var r = function() {
             process.nextTick(function() {
               output({
